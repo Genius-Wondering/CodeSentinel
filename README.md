@@ -1,8 +1,6 @@
 # 🔍 CodeSentinel
 
-**CodeSentinel** is an AI-powered multi-agent system that indexes a Python codebase (and optionally PDF/Markdown/Word/Excel docs alongside it) and answers natural-language questions — with exact file and line citations.
-
-> *"Where is JWT authentication implemented?"* → `auth/middleware.py lines 42–67`
+**CodeSentinel** is an AI-powered multi-agent system that indexes a Python codebase (and optionally PDF/Markdown/Word/Excel docs alongside it) and answers natural-language questions — with exact file and line citations. Instead of grepping through an unfamiliar repo, just ask something like *"Where is JWT authentication implemented?"* and get back a cited answer such as `auth/middleware.py, lines 42–67`.
 
 ---
 
