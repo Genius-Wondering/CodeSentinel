@@ -1,0 +1,43 @@
+# This file mirrors pyproject.toml [project.dependencies] exactly.
+# Install with: pip install -e . --extra-index-url https://pypi.org/simple
+# Or directly:  pip install -r requirements.txt
+
+fastapi==0.115.14
+uvicorn[standard]==0.35.0
+
+langchain==1.3.2
+langchain-core>=1.4.0,<2.0.0
+langchain-community==0.4.1
+langchain-openai==1.0.3
+langchain-chroma==1.0.0
+langchain-classic>=0.1.0    # provides EnsembleRetriever in langchain 1.x ecosystem
+langgraph>=1.2.2,<1.3.0
+
+rank-bm25==0.2.2
+
+chromadb==1.0.21
+
+tree-sitter==0.25.1
+tree-sitter-python==0.25.0
+
+openai==2.1.0
+
+streamlit==1.48.1
+
+python-dotenv==1.1.1
+pydantic==2.11.7
+
+# Optional extras (not in pyproject.toml but used if available):
+pdfminer.six>=20221105     # layout-aware PDF extraction; falls back to PyPDFLoader if absent
+
+# Added in v0.3.0 — document upload support
+python-multipart>=0.0.9   # FastAPI multipart/form-data (UploadFile)
+docx2txt>=0.8             # Word .docx text extraction (LangChain Docx2txtLoader)
+openpyxl>=3.1.0           # Excel .xlsx/.xls reading (direct openpyxl API)
+python-docx>=1.1.0        # python-docx fallback for DOCX if docx2txt unavailable
+
+# Added in v0.5.0 — persistent metadata store (document/repo versions, query logs)
+# SQLite by default (config.DATABASE_URL); swap to mysql+pymysql:// or
+# postgresql+psycopg2:// and add the matching driver package to move to a
+# real RDBMS without touching app/db_models.py.
+sqlalchemy==2.0.51

@@ -1,0 +1,47 @@
+# 1. Build system configuration
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# 2. Project metadata and dependencies
+[project]
+name = "codesentinel"
+version = "0.5.0"
+description = "AI-powered code analysis and RAG agent"
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi==0.115.14",
+    "uvicorn[standard]==0.35.0",
+
+    "langchain==1.3.2",
+    "langchain-core>=1.4.0, <2.0.0",
+    "langchain-community==0.4.1",
+    "langchain-openai==1.0.3",
+    "langchain-chroma==1.0.0",
+    "langchain-classic>=0.1.0",   # provides EnsembleRetriever in langchain 1.x
+    "langgraph>=1.2.2, <1.3.0",
+
+    "rank-bm25==0.2.2",
+
+    "chromadb==1.0.21",
+
+    "tree-sitter==0.25.1",
+    "tree-sitter-python==0.25.0",
+
+    "openai==2.1.0",
+
+    "streamlit==1.48.1",
+
+    "python-dotenv==1.1.1",
+    "pydantic==2.11.7",
+    "python-multipart>=0.0.9",  # required for FastAPI UploadFile / multipart form endpoints
+    "docx2txt>=0.8",             # Word document text extraction
+    "openpyxl>=3.1.0",           # Excel workbook reading
+    "python-docx>=1.1.0",        # fallback Word loader
+    "sqlalchemy==2.0.51",         # persistent metadata store (app/db.py, app/db_models.py)
+]
+
+# 3. Explicitly specify the directories to package
+[tool.setuptools.packages.find]
+include = ["app*"]

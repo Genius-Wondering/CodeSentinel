@@ -1,0 +1,107 @@
+[
+  {
+    "query": "向量数据库是如何初始化的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/rag/vectordb.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "BM25 检索和向量检索是如何融合的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/rag/vectordb.py", "start_line": 80}
+    ]
+  },
+  {
+    "query": "代码仓库是如何被加载成 Document 的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/services/repo_loader.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "树形 AST 解析是在哪里实现的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/rag/parser.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "Cross-Encoder 重排序模型是怎么加载的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/agent/reranker.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "RETRIEVER_TOP_K 这个配置在哪里被引用",
+    "type": "exact_identifier",
+    "correct_chunks": [
+      {"file": "app/agent/retriever.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "BM25_WEIGHT 和 VECTOR_WEIGHT 的默认值是多少",
+    "type": "exact_identifier",
+    "correct_chunks": [
+      {"file": "app/config.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "EnsembleRetriever 在哪里被实例化",
+    "type": "exact_identifier",
+    "correct_chunks": [
+      {"file": "app/rag/vectordb.py", "start_line": 80}
+    ]
+  },
+  {
+    "query": "SKIP_DIR_NAMES 包含哪些目录",
+    "type": "exact_identifier",
+    "correct_chunks": [
+      {"file": "app/services/repo_loader.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "DOC_CHUNK_OVERLAP 这个参数在哪里用到",
+    "type": "exact_identifier",
+    "correct_chunks": [
+      {"file": "app/rag/doc_chunker.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "sub_queries 是怎么从 LLM 响应里解析出来的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/agent/planner.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "空索引时如何防止检索崩溃",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/rag/vectordb.py", "start_line": 68}
+    ]
+  },
+  {
+    "query": "MarkdownHeaderTextSplitter 是在哪里使用的",
+    "type": "exact_identifier",
+    "correct_chunks": [
+      {"file": "app/rag/doc_chunker.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "Reviewer 的 prompt 模板是如何加载的",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/agent/reviewer.py", "start_line": 1}
+    ]
+  },
+  {
+    "query": "批量插入 Chroma 时分批的大小是多少",
+    "type": "natural",
+    "correct_chunks": [
+      {"file": "app/rag/vectordb.py", "start_line": 47}
+    ]
+  }
+]

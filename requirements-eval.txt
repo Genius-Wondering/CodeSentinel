@@ -1,0 +1,19 @@
+# Evaluation-only dependencies — NOT required to run CodeSentinel itself.
+# Installed separately on purpose: ragas pulls in its own LLM/embedding
+# abstractions and beir pulls in pytrec_eval (a C extension); neither is
+# something a production deployment of the app needs.
+#
+#   pip install -r requirements-eval.txt
+#
+# Used by:
+#   tests/swe_qa_ragas_eval.py    — end-to-end answer-quality eval (ragas)
+#   tests/beir_retriever_eval.py  — retriever-only generalization eval (beir)
+
+ragas==0.4.3
+beir==2.2.0
+
+# tests/swe_qa_ragas_eval.py wraps the project's existing OpenAI usage in
+# ragas's LangChain adapter — already a transitive dependency via
+# langchain-openai in requirements.txt, pinned here for clarity since this
+# file is meant to be installable on its own.
+langchain-openai==1.0.3
