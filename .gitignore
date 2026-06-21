@@ -11,3 +11,5 @@ dist/
 .DS_Store
 .idea/
 .vscode/
+DEVLOG.md
+METRICS.md
